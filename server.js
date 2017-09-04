@@ -71,9 +71,15 @@ app.get("/bad", (req, res) => {
     });
 });
 
+app.use("/projects", (req, res) => {
+    res.render("projects.hbs");
+});
+
 app.use((req, res, next) => {
    res.render("maintenance.hbs"); 
 });
+
+
 
 // gives access to static files, you need to specify extension when accessing
 app.use(express.static(__dirname + "/public"));

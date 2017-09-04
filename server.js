@@ -4,6 +4,8 @@ const hbs = require("hbs");
 
 const fs = require("fs");
 
+const port = process.env.PORT ;
+
 var app = express();
 //set express view engine as hbs type
 app.set("view engine", "hbs");
@@ -82,7 +84,7 @@ app.use(express.static(__dirname + "/public"));
 
 // Making it listen in C9
 app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("Server Started!");
+    console.log(`Server Started on Port ${process.env.PORT}!`);
 });
 
 

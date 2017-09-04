@@ -71,7 +71,7 @@ app.get("/bad", (req, res) => {
     });
 });
 
-app.use("/projects", (req, res) => {
+app.get("/projects", (req, res) => {
     res.render("projects.hbs");
 });
 
